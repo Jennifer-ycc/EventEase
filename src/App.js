@@ -8,6 +8,7 @@ import { Ecommerce, Calendar, Customers, Line, Area, Bar, Pie, ColorPicker } fro
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+import EventList from './components/EventList'; // Import the EventList component
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -47,6 +48,7 @@ const App = () => {
               <Sidebar />
             </div>
           )}
+
           <div
             className={
               activeMenu
@@ -57,6 +59,10 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
+
+            {/* Add the EventList component here so it's visible on every page */}
+            <EventList />
+
             <div>
               {themeSettings && <ThemeSettings />}
 
@@ -69,7 +75,6 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} />
 
                 {/* apps */}
-                
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 

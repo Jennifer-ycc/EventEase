@@ -1,12 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App]
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
 
 Runs the app in the development mode.\
 to view it in your browser.
@@ -45,7 +36,7 @@ Set up environment variables:
 Create a .env file in the backend folder and add the necessary environment variables like MongoDB URI, JWT secret, etc.
 Start the server:
 npm start
-The backend will be running on http://localhost:5000.
+The backend will be running on http://localhost:5002.
 
 Set Up the Frontend
 Navigate to the frontend folder.
@@ -83,17 +74,127 @@ EventEase/
 │   ├── server.js              # Main server file
 │   └── package.json           # Backend dependencies
 └── README.md                   # Project documentation
-Contributing
-
-We welcome contributions to make EventEase even better! Here’s how you can contribute:
-
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes.
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature-branch).
-Create a new Pull Request.
 
 
+#Dec 10, 2024
+Objective: Set up the project environment for EventEase (Frontend).
 
+*Changes Made:
+Installed necessary dependencies.
+Set up basic folder structure and file organization.
+
+--> Next Steps:
+Start working on the Event model 
+Implement the basic functionality to add and display events in the app.
+
+
+Dec 18, 2025
+Objective: Build the components for EventEase.
+Started working on API routes to handle task creation and retrieval.
+
+*Changes Made:
+Developed a Task component that includes form, such as pages, apps and charts.
+
+Started working on the API routes to handle task creation and retrieval.
+
+**Challenges:
+Encountered form validation issues when adding tasks. The form was not handling empty fields properly.
+
+---> Next Steps:
+Implement functionality to display tasks from the database on the frontend.
+Work on task editing and deletion features.
+
+
+Dec 22, 2024
+Objective: Develop and integrate the RSVP Tracker for EventEase.
+
+*Changes Made:
+Created the RSVP Tracker component, allowing users to RSVP for events.
+Updated the database schema to include RSVP status for each event.
+Built API routes to handle RSVPs (GET, POST).
+
+**Challenges:
+Had trouble managing the RSVP state for multiple events. The UI wasn’t updating correctly when the user clicked RSVP.
+Solution: Used React’s state management (using useState and useEffect) to track the RSVP status in real time and update the UI accordingly.
+
+---> Next Steps:
+Implement user authentication to manage individual user accounts and RSVPs.
+Style the RSVP Tracker for a more user-friendly interface.
+
+Dec 25, 2024
+Objective: Improve UI/UX for EventEase, particularly the Event Dashboard.
+
+*Changes Made:
+Reworked the Event Dashboard layout to make it more visually appealing.
+Added icons for different event statuses (e.g., "Upcoming", "In Progress", "Completed").
+Applied CSS Flexbox to ensure responsive design for mobile devices.
+
+**Challenges:
+The responsive design was not working well on mobile screens, and some components were overflowing.
+Solution: Tweaked the Flexbox layout and added media queries to handle different screen sizes properly.
+
+--> Next Steps:
+Refactor the Event Dashboard to fetch data dynamically from the backend.
+Work on push notifications for event reminders and RSVP updates.
+
+Dec 27, 2024
+Objective: Add Notifications for events and tasks.
+
+*Changes Made:
+Integrated Push Notifications into the app, allowing users to receive notifications for upcoming events, task deadlines, and RSVPs.
+Used Web Push API to send notifications from the backend to the frontend.
+Created a Notification component to display notifications to the user.
+
+**Challenges:
+Push Notifications weren’t showing correctly on all browsers (e.g., some users didn’t receive notifications on Safari).
+Solution: Checked service worker configuration and ensured the app registered the service worker properly on all browsers. Used browser compatibility checks.
+
+--> Next Steps:
+
+Work on adding authentication to personalize notifications (e.g., different notifications for each user).
+Refine the notification UI and allow users to opt-in or opt-out.
+
+
+Dec 28, 2024
+Objective: Finalize and Optimize EventEase app performance.
+
+*Changes Made:
+Refactored backend routes for better performance (optimized database queries).
+Reduced the size of frontend assets (images, icons) for faster loading.
+Code splitting and lazy loading for React components to reduce initial load time.
+
+**Challenges:
+The large image files were causing slow loading times, especially on mobile devices.
+Solution: Compressed images using tools like ImageOptim and implemented responsive images using the srcset attribute.
+
+--> Next Steps:
+Test performance improvements under real-world conditions (e.g., slower network, various device types).
+Complete the user authentication feature and deploy the app to production.
+
+Jan 20, 2025 
+Objective: Set up the backend environment for EventEase.
+
+*Changes Made:
+Initialized the Node.js/Express backend.
+Installed necessary dependencies like express, mongoose, and cors for backend setup.
+
+**Challenges:
+Encountered an issue with CORS when trying to connect the React frontend to the Express backend.
+    Solution: Resolved by installing the cors middleware and configuring it in the backend server.
+
+---> next steps:
+Begin working on MongoDB database integration.
+Created a MongoDB schema to store task data.
+
+Jan 21, 2025
+Progress:
+
+Successfully connected to MongoDB after troubleshooting authentication issues.
+Began working on deployment using Render.
+
+**Challenges:
+Encountered a build failure during the deployment process.
+
+--> Next Steps:
+Investigate and resolve the build failure to proceed with deployment.
 

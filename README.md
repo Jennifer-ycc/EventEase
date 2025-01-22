@@ -1,7 +1,4 @@
 
-Runs the app in the development mode.\
-to view it in your browser.
-
 EventEase – A Collaborative Event Planning and Tracking Web App
 
 EventEase is a user-friendly web application designed to help individuals and small businesses plan and manage events seamlessly. The platform offers features like task assignment, budget tracking, RSVP management, and customizable event templates to ensure successful event execution.
